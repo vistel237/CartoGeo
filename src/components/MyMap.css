@@ -1,6 +1,13 @@
-.leaflet-container{
+/* .leaflet-container{
     background-color: white;
-}
+} */
 .map{
     height: 92.5vh;
+}
+.mapcolor{
+    position: absolute;
+    right: 10px;
+    height: 45px;
+    height: 45px;
+    top: 5px;
 }
