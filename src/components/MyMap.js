@@ -58,26 +58,26 @@ class MyMap extends Component {
     render() {
         return( 
             <div>
+                <input
+                        type="color"
+                        value={this.state.color}
+                        onChange={this.colorChange}
+                        className="mapcolor"
+                    />
                 <MapContainer className="map" zoom={2} center={[20, 100]}>
                     <TileLayer
                     attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                     />
-                        <Marker position={[51.505, -0.09]}>
+                    {/* <Marker position={[51.505, -0.09]}>
                         <Popup>
                             A pretty CSS3 popup. <br /> Easily customizable.
                         </Popup>
-                    </Marker>
+                    </Marker> */}
                     <GeoJSON
                         style={this.countryStyle}
                         data={mapData.features}
                         onEachFeature={this.onEachCountry}
-                    />
-                    <input
-                        type="color"
-                        value={this.state.color}
-                        onChange={this.colorChange}
-                        className="mapcolor"
                     />
                 </MapContainer>
             </div>
